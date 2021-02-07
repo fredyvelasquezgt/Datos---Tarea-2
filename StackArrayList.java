@@ -1,4 +1,3 @@
-package Tarea;
 import java.util.ArrayList;
 
 
@@ -6,7 +5,7 @@ import java.util.ArrayList;
  * 
  * @author Fredy Velasquez <macacoloco696gmail.com>
  */
-public class StackArrayList<E> implements Stack<E> {
+public class StackArrayList<E> implements Stack<E> { //Clase que implemente la interface STACK de tipo GENERICO
 protected ArrayList<E> data;
 
 	public StackArrayList()

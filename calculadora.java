@@ -2,7 +2,7 @@
  *
  * @author Fredy Velasquez <macacoloco696gmail.com>
  */
-public interface calculadora<E> {
+public interface calculadora<E> { //Interface creada por los estudiantes para el desarrollo de la tarea
     public int suma(int x, int y);
     public int resta(int x, int y);
     public int multiplicacion(int x, int y);

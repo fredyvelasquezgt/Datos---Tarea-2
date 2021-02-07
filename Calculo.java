@@ -8,59 +8,15 @@ import java.io.*;
  */
 public class Calculo implements calculadora { //Se implementa la interface calculadora desarrollada por los estudiantes
 
-    /**
-     * Opera una suma con los parametros 'x' y 'y'
-     *
-     * @params: 'x' y 'y' operandos
-     * @return: Resultado de la suma.
-     */
-    @Override
-    public int suma(int x, int y) {
-        return x + y;
-    }
 
-    /**
-     * Opera una resta con los parametros 'x' y 'y'
-     *
-     * @params: 'x' y 'y' operandos
-     * @return: Resultado de la resta.
-     */
-    @Override
-    public int resta(int x, int y) {
-        return x - y;
-    }
+//Apartado el cual lee el archivo con nombre 'datos.txt' el cual contiene las operaciones con formato POSTFIX
+    File txt = null;
+    FileReader fr = null; //Creacion de variables las cuales me ayduaran a leer el archivo
+    BufferedReader b = null;
+    private StackArrayList<Integer> aList = new StackArrayList<>(); //ArrayList auxiliar para almacenar los operadores de las operaciones guardadas en el archio .txt
+    private Scanner entrada = new Scanner(System.in); //Scanner para poder registrar la ruta del archivo .txt con las operaciones en notacion inversa
 
-    /**
-     * Opera una multiplicacion con los parametros 'x' y 'y'
-     *
-     * @params: 'x' y 'y' operandos
-     * @return: Resultado de la suma.
-     */
-    @Override
-    public int multiplicacion(int x, int y) {
-        return x * y;
-    }
-
-    /**
-     * Opera una division con los parametros 'x' y 'y'
-     *
-     * @params: 'x' y 'y' operandos
-     * @return: Resultado de la division.
-     */
-    @Override
-    public int division(int x, int y) {
-        return x / y;
-    }
-
-    @Override
-    public int operar(Stack x) {
-        return 0;
-    }
-
-    @Override
-    public String decode(String a) {
-        return null;
-    }
+    
 
     /*
      * Metodo que da la bienvenida al usuario
@@ -102,13 +58,7 @@ public class Calculo implements calculadora { //Se implementa la interface calcu
         }
     }
 
-    //Apartado el cual lee el archivo con nombre 'datos.txt' el cual contiene las operaciones con formato POSTFIX
-    File txt = null;
-    FileReader fr = null; //Creacion de variables las cuales me ayduaran a leer el archivo
-    BufferedReader b = null;
-    private StackArrayList<Integer> aList = new StackArrayList<>(); //ArrayList auxiliar para almacenar los operadores de las operaciones guardadas en el archio .txt
-    private Scanner entrada = new Scanner(System.in); //Scanner para poder registrar la ruta del archivo .txt con las operaciones en notacion inversa
-
+    
     /*
      * Metodo que realiza las 4 operaciones de la calculadora
      * 
@@ -181,7 +131,59 @@ public class Calculo implements calculadora { //Se implementa la interface calcu
         }
         return validado; //Resultado de lo validado por el TRY - CATCH
     }
+    
+    /**
+     * Opera una suma con los parametros 'x' y 'y'
+     *
+     * @params: 'x' y 'y' operandos
+     * @return: Resultado de la suma.
+     */
+    @Override
+    public int suma(int x, int y) {
+        return x + y;
+    }
+
+    /**
+     * Opera una resta con los parametros 'x' y 'y'
+     *
+     * @params: 'x' y 'y' operandos
+     * @return: Resultado de la resta.
+     */
+    @Override
+    public int resta(int x, int y) {
+        return x - y;
+    }
+
+    /**
+     * Opera una multiplicacion con los parametros 'x' y 'y'
+     *
+     * @params: 'x' y 'y' operandos
+     * @return: Resultado de la suma.
+     */
+    @Override
+    public int multiplicacion(int x, int y) {
+        return x * y;
+    }
+
+    /**
+     * Opera una division con los parametros 'x' y 'y'
+     *
+     * @params: 'x' y 'y' operandos
+     * @return: Resultado de la division.
+     */
+    @Override
+    public int division(int x, int y) {
+        return x / y;
+    }
+
+    @Override
+    public int operar(Stack x) {
+        return 0;
+    }
+
+    @Override
+    public String decode(String a) {
+        return null;
+    }
 
 }
-
-
